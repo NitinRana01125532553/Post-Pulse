@@ -1,7 +1,20 @@
 import React from 'react'
 import Card from './Card';
 
-function Store({shirts, shoes, pants}) {
+interface items {
+    title: string,
+    desc: string,
+    price: string,
+    image: string
+  }
+
+  interface props {
+    shirts: items[],
+    shoes: items[],
+    pants: items[]
+  }
+
+function Store({shirts, shoes, pants}: props) {
   return (
     <div className="min-h-screen px-14 py-6">
       <h1 className="text-2xl font-bold mb-6">Shirts</h1>
