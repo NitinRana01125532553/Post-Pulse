@@ -9,12 +9,20 @@ function Navbar() {
 
     const [menu, setMenu] = useState(false);
 
-    const menus = [
-      { title: "Home", path: "#" },
-      { title: "Blog", path: "#" },
-      { title: "About Us", path: "#" },
-      { title: "Contact Us", path: "#" },
-    ];
+    interface menu {
+      title: string;
+      path: string;
+    }
+
+  type menus = menu[]
+
+const menus: menus = [
+  { title: "Home", path: "#" },
+  { title: "Blog", path: "#" },
+  { title: "About Us", path: "#" },
+  { title: "Contact Us", path: "#" },
+];
+    
   return (
     <nav className="bg-white w-full border-b md:border-0">
       <div className="items-center px-6 max-w-screen-xl mx-auto md:flex md:px-8">
