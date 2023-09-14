@@ -2,10 +2,18 @@ import { UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Navbar from './components/Navbar'
 import Store from './components/Store'
+import Footer from './components/Footer'
 
 export default function Home() {
 
-  const shirts = [
+  interface items {
+    title: string,
+    desc: string,
+    price: string,
+    image: string
+  }
+
+  const shirts: items[] = [
     {
       title: "Men's solid pink shirt",
       desc: "Slim-Fit cotton Shirt ",
@@ -63,7 +71,7 @@ export default function Home() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkP1tA5fTQeCTUtKdI9BYTwur5ubTOxXCYWg&usqp=CAU",
     },
   ];
-  const shoes = [
+  const shoes: items[] = [
     {
       title: "Nike Running shoes",
       desc: "White Running Shoes",
@@ -107,7 +115,7 @@ export default function Home() {
         "https://www.jiomart.com/images/product/500x630/rv70b8brkx/axter-black-casual-shoes-for-women-product-images-rv70b8brkx-0-202211080335.jpg",
     },
   ];
-  const pants = [
+  const pants: items[] = [
     {
       title: "Black Formal pant",
       desc: "Desc",
@@ -156,6 +164,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Store shirts={shirts} pants={pants} shoes={shoes}  />
+      <Footer />
     </div>
   )
 }
