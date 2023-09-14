@@ -2,6 +2,7 @@ import { UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Navbar from './components/Navbar'
 import Store from './components/Store'
+import Footer from './components/Footer'
 
 export default function Home() {
 
@@ -163,6 +164,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Store shirts={shirts} pants={pants} shoes={shoes}  />
+      <Footer />
     </div>
   )
 }
